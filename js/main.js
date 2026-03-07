@@ -281,4 +281,80 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- NEW PREMIUM UI FEATURES ---
+
+    // 1. Page Preloader
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                preloader.classList.add('hidden');
+            }, 500); // Small delay to let animations sync and ensure fonts load
+        });
+    }
+
+    // 2. Magnetic Buttons
+    const buttons = document.querySelectorAll('.btn, .tab-btn, .carousel-btn');
+    buttons.forEach(btn => {
+        btn.classList.add('magnetic');
+
+        btn.addEventListener('mousemove', (e) => {
+            const position = btn.getBoundingClientRect();
+            const x = e.clientX - position.left - position.width / 2;
+            const y = e.clientY - position.top - position.height / 2;
+
+            btn.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0px, 0px)';
+        });
+    });
+
+    // 3. 3D Tilt Effect on Cards
+    if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll('.service-card'), {
+            max: 5,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+
+        // Use MutationObserver for dynamically added portfolio items
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.addedNodes.length) {
+                    mutation.addedNodes.forEach((node) => {
+                        if (node.classList && node.classList.contains('work-item')) {
+                            VanillaTilt.init(node, {
+                                max: 10,
+                                speed: 400,
+                                scale: 1.02
+                            });
+                        }
+                    });
+                }
+            });
+        });
+
+        if (workGrid) {
+            observer.observe(workGrid, { childList: true });
+        }
+    }
+
+    // 4. Page Transitions
+    const links = document.querySelectorAll('a[href]:not([href^="#"]):not([target="_blank"]):not([href^="mailto:"]):not([href^="tel:"])');
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href) {
+                e.preventDefault();
+                document.body.classList.add('page-transitioning');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500); // Match CSS transition duration
+            }
+        });
+    });
+
 });
