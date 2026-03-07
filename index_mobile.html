@@ -8,10 +8,10 @@
     <meta name="description"
         content="Liteup Media - A full-service digital marketing agency helping your business shine, attract more customers, and achieve rapid growth.">
 
-    <!-- Mobile Redirect Script -->
+    <!-- Desktop Redirect Script -->
     <script>
-        if (window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            window.location.replace('index_mobile.html' + window.location.hash);
+        if (window.innerWidth > 768 && !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            window.location.replace('index.html' + window.location.hash);
         }
     </script>
 

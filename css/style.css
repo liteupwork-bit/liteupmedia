@@ -644,6 +644,17 @@ textarea::placeholder {
     transition: var(--transition);
 }
 
+/* Fullscreen Video Fixes */
+video:-webkit-full-screen {
+    object-fit: contain !important;
+}
+video:-moz-full-screen {
+    object-fit: contain !important;
+}
+video:fullscreen {
+    object-fit: contain !important;
+}
+
 .work-grid[data-category="performance"] .work-item {
     flex: 0 0 calc(50% - 0.75rem);
     aspect-ratio: auto;
