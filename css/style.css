@@ -391,6 +391,7 @@ textarea::placeholder {
 
 .hero-content {
     max-width: 800px;
+    text-align: center;
 }
 
 .hero-subtitle {
@@ -1288,24 +1289,28 @@ video:fullscreen {
     .hero-content {
         max-width: 100%;
         width: 100%;
+        text-align: center;
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
         letter-spacing: 0;
         line-height: 1.1;
         margin-bottom: 1.5rem;
+        text-align: center;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
         margin-bottom: 2rem;
         line-height: 1.6;
+        text-align: center;
+        max-width: 100%;
     }
 
     .btn-primary {
         padding: 1rem 2.5rem;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     /* --- Marquee --- */
@@ -1543,18 +1548,20 @@ video:fullscreen {
     }
 
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         line-height: 1.15;
+        text-align: center;
     }
 
     .hero-subtitle {
-        font-size: 0.95rem;
+        font-size: 1rem;
         line-height: 1.6;
+        text-align: center;
     }
 
     .btn-primary {
         padding: 0.875rem 2rem;
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
 
     .section {
