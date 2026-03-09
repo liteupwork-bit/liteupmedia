@@ -601,6 +601,7 @@ textarea::placeholder {
 .about {
     background-color: var(--color-dark);
     padding: 6rem 0;
+    overflow: hidden;
 }
 
 .section-subtitle {
@@ -618,6 +619,7 @@ textarea::placeholder {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 }
 
 .team-card {
@@ -687,10 +689,12 @@ textarea::placeholder {
     .team-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+        overflow: hidden;
     }
 
     .team-card {
         padding: 2rem 1.5rem;
+        max-width: 100%;
     }
 
     .team-placeholder {
@@ -709,6 +713,11 @@ textarea::placeholder {
 
     .team-title {
         font-size: 0.85rem;
+    }
+
+    .about {
+        padding: 4rem 0;
+        overflow: hidden;
     }
 }
 
@@ -1311,6 +1320,28 @@ video:fullscreen {
     .btn-primary {
         padding: 1rem 2.5rem;
         font-size: 1.1rem;
+    }
+
+    /* --- About Us --- */
+    .about {
+        padding: 3rem 0;
+        overflow: hidden;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .team-grid {
+        margin-top: 2rem;
+        gap: 1.5rem;
+        overflow: hidden;
+    }
+
+    .team-card {
+        padding: 1.75rem 1.25rem;
+        max-width: 100%;
     }
 
     /* --- Marquee --- */
