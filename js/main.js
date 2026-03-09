@@ -190,7 +190,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Init Animation On Scroll
     if (typeof AOS !== 'undefined') {
-        AOS.init({ once: true, offset: 50, duration: 800 });
+        AOS.init({ 
+            once: true, 
+            offset: 50, 
+            duration: 800,
+            disable: 'mobile' // Disable animations on mobile for better performance
+        });
     }
 
     // --- PREMIUM UI LOGIC ---
@@ -213,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let charString = '';
                 for (let i = 0; i < word.length; i++) {
                     charString += `<span class="char" style="animation-delay: ${delay}s">${word[i]}</span>`;
-                    delay += 0.03;
+                    delay += 0.015; // Reduced from 0.03 for faster animation
                 }
                 newHTML += `<span class="word" style="display:inline-block; white-space:pre;">${charString} </span>`;
             }
@@ -290,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('load', () => {
             setTimeout(() => {
                 preloader.classList.add('hidden');
-            }, 500); // Small delay to let animations sync and ensure fonts load
+            }, 300); // Reduced delay for faster loading
         });
     }
 

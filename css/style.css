@@ -322,6 +322,11 @@ textarea::placeholder {
     max-width: 100vw;
 }
 
+.hero-content {
+    opacity: 1;
+    visibility: visible;
+}
+
 .hero-bg {
     position: absolute;
     top: 0;
@@ -1816,7 +1821,7 @@ video:fullscreen {
     display: inline-block;
     opacity: 0;
     transform: translateY(30px);
-    animation: revealChar 0.8s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+    animation: revealChar 0.4s cubic-bezier(0.2, 1, 0.3, 1) forwards;
 }
 
 @keyframes revealChar {
