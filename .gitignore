@@ -1,0 +1,23 @@
+# Large video files (exceed Cloudflare 25MB limit)
+assets/Works/UGC ADS/*.mp4
+*.mp4
+
+# Wrangler
+.wrangler/
+wrangler.toml
+wrangler.jsonc
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

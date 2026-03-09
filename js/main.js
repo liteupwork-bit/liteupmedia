@@ -112,11 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'image', src: 'assets/Works/SMM/Indian Instagram Feed.jfif', category: 'smm', tags: ['Instagram', 'Grid Design'] },
         { type: 'image', src: 'assets/Works/SMM/Instagram Feed.jfif', category: 'smm', tags: ['Social Media', 'Content Creation'] },
         { type: 'image', src: 'assets/Works/SMM/Transform Your Digital Presence Using Skincare Content Inspiration.jfif', category: 'smm', tags: ['Skincare', 'Aesthetics'] },
-        { type: 'video', src: 'assets/Works/UGC ADS/creative hair color english.mp4', category: 'ugc', tags: ['Influencer', 'Haircare'] },
-        { type: 'video', src: 'assets/Works/UGC ADS/free products english.mp4', category: 'ugc', tags: ['TikTok Style', 'Review'] },
+        // UGC videos removed due to file size limitations - can be added via external hosting (YouTube, Vimeo, etc.)
+        // { type: 'video', src: 'assets/Works/UGC ADS/creative hair color english.mp4', category: 'ugc', tags: ['Influencer', 'Haircare'] },
+        // { type: 'video', src: 'assets/Works/UGC ADS/free products english.mp4', category: 'ugc', tags: ['TikTok Style', 'Review'] },
         // Mock Website Dev items as no images provided
         { type: 'image', src: 'assets/LOGO/Liteup Logo Transparent.png', category: 'web', tags: ['Corporate', 'Full Stack'] },
-        { type: 'image', src: 'assets/LOGO/Liteup Logo Transparent.png', category: 'web', tags: ['E-Commerce', 'UI/UX'] }
+        { type: 'image', src: 'assets/LOGO/Liteup Logo Transparent.png', category: 'ugc', tags: ['UGC Content', 'Influencer Marketing'] }
     ];
 
     const workGrid = document.getElementById('workGrid');
