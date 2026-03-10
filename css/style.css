@@ -174,10 +174,10 @@ button {
 
 .btn {
     display: inline-block;
-    padding: 0.875rem 2rem;
+    padding: 1.1rem 2.75rem;
     border-radius: 4px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -316,8 +316,14 @@ textarea::placeholder {
     color: var(--color-white);
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
     width: 100%;
+}
+
+.nav-links a.active {
+    color: var(--color-white);
+    font-weight: 600;
 }
 
 .mobile-menu-btn {
@@ -332,7 +338,7 @@ textarea::placeholder {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 8rem 0 4rem;
+    padding: 9rem 0 4rem;
     overflow: hidden;
     width: 100%;
     max-width: 100vw;
@@ -411,15 +417,15 @@ textarea::placeholder {
 }
 
 .hero-subtitle {
-    font-size: 1.125rem;
+    font-size: 1.3rem;
     color: var(--color-text);
     margin: 0 auto 2.5rem;
-    max-width: 600px;
+    max-width: 650px;
 }
 
 .hero-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 400;
     line-height: 1;
     color: var(--color-white);
@@ -538,6 +544,113 @@ textarea::placeholder {
 
 .modal-close:hover {
     color: var(--color-white);
+}
+
+/* Stats & Client Logos Section */
+.stats-section {
+    padding: 4rem 0;
+    background-color: var(--color-black);
+    border-bottom: 1px solid var(--color-charcoal-light);
+}
+
+.stats-content {
+    text-align: center;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--color-gold);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.trusted-by {
+    margin-top: 3rem;
+}
+
+.trusted-label {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+.client-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.logo-item {
+    width: 120px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.logo-item:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .stats-section {
+        padding: 3rem 0;
+    }
+
+    .stats-grid {
+        gap: 2rem;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+    }
+
+    .client-logos {
+        gap: 2rem;
+    }
+
+    .logo-item {
+        width: 100px;
+        height: 60px;
+    }
 }
 
 /* Services Section */
@@ -1296,7 +1409,7 @@ video:fullscreen {
 
     /* --- Hero --- */
     .hero {
-        padding: 8rem 0 4rem;
+        padding: 9.5rem 0 4rem;
         min-height: 100vh;
         display: flex;
         align-items: center;
@@ -1318,7 +1431,7 @@ video:fullscreen {
     }
 
     .hero-title {
-        font-size: 3.5rem;
+        font-size: 4.2rem;
         letter-spacing: -0.02em;
         line-height: 1.1;
         margin-bottom: 1.5rem;
@@ -1326,7 +1439,7 @@ video:fullscreen {
     }
 
     .hero-subtitle {
-        font-size: 1.25rem;
+        font-size: 1.4rem;
         margin-bottom: 2.5rem;
         line-height: 1.7;
         text-align: center;
@@ -1335,8 +1448,8 @@ video:fullscreen {
     }
 
     .btn-primary {
-        padding: 1.1rem 2.75rem;
-        font-size: 1.15rem;
+        padding: 1.35rem 3.5rem;
+        font-size: 1.35rem;
     }
 
     /* --- About Us --- */

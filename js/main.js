@@ -55,6 +55,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Scroll-spy: highlight nav link of section currently in view
+    const sections = document.querySelectorAll('section[id]');
+    const navLinkItems = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinkItems.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + entry.target.id) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, {
+        rootMargin: '-20% 0px -60% 0px', // activates when section is in top 40% of viewport
+        threshold: 0
+    });
+
+    sections.forEach(section => sectionObserver.observe(section));
+
     // Basic Form Submission (prevent default and show success message)
     const heroForm = document.getElementById('heroForm');
     if (heroForm) {
