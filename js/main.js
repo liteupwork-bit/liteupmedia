@@ -112,12 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'image', src: 'assets/Works/SMM/Indian Instagram Feed.jfif', category: 'smm', tags: ['Instagram', 'Grid Design'] },
         { type: 'image', src: 'assets/Works/SMM/Instagram Feed.jfif', category: 'smm', tags: ['Social Media', 'Content Creation'] },
         { type: 'image', src: 'assets/Works/SMM/Transform Your Digital Presence Using Skincare Content Inspiration.jfif', category: 'smm', tags: ['Skincare', 'Aesthetics'] },
-        // UGC videos removed due to file size limitations - can be added via external hosting (YouTube, Vimeo, etc.)
-        // { type: 'video', src: 'assets/Works/UGC ADS/creative hair color english.mp4', category: 'ugc', tags: ['Influencer', 'Haircare'] },
-        // { type: 'video', src: 'assets/Works/UGC ADS/free products english.mp4', category: 'ugc', tags: ['TikTok Style', 'Review'] },
+        // UGC YouTube videos
+        { type: 'youtube', src: 'https://youtube.com/shorts/yZkJ5PibueY', category: 'ugc', tags: ['UGC Content', 'Influencer Marketing'] },
+        { type: 'youtube', src: 'https://youtube.com/shorts/8na4BMRr068', category: 'ugc', tags: ['UGC Content', 'Influencer Marketing'] },
         // Mock Website Dev items as no images provided
-        { type: 'image', src: 'assets/LOGO/Liteup Logo Transparent.png', category: 'web', tags: ['Corporate', 'Full Stack'] },
-        { type: 'image', src: 'assets/LOGO/Liteup Logo Transparent.png', category: 'ugc', tags: ['UGC Content', 'Influencer Marketing'] }
+        { type: 'image', src: 'assets/LOGO/Liteup Logo Transparent.png', category: 'web', tags: ['Corporate', 'Full Stack'] }
     ];
 
     const workGrid = document.getElementById('workGrid');
@@ -138,6 +137,12 @@ document.addEventListener('DOMContentLoaded', () => {
             el.className = 'work-item show';
             if (item.type === 'video') {
                 el.innerHTML = `<video src="${item.src}" autoplay loop muted playsinline controls loading="lazy"></video>`;
+            } else if (item.type === 'youtube') {
+                // Extract video ID from YouTube URL
+                const videoId = item.src.includes('/shorts/') 
+                    ? item.src.split('/shorts/')[1].split('?')[0]
+                    : item.src.split('v=')[1]?.split('&')[0];
+                el.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" style="width:100%; height:100%; min-height:400px;"></iframe>`;
             } else {
                 el.innerHTML = `<img src="${item.src}" alt="Portfolio Work" loading="lazy">`;
             }
