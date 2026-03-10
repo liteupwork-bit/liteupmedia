@@ -41,7 +41,6 @@ html {
     overflow-x: hidden;
     width: 100%;
     max-width: 100vw;
-    position: relative;
 }
 
 /* Custom Scrollbar */
@@ -75,7 +74,6 @@ body {
     transition: opacity 0.5s ease;
     width: 100%;
     max-width: 100vw;
-    position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -91,24 +89,23 @@ main {
     flex-shrink: 0;
     width: 100%;
     overflow-x: hidden;
-}
-
-html {
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100vw;
-    height: 100%;
+    margin-top: 0;
 }
 
 @media (max-width: 768px) {
-    html, body {
+    html {
         overflow-x: hidden !important;
+        overflow-y: auto !important;
         width: 100%;
         max-width: 100vw;
     }
     
     body {
-        overflow-y: auto;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        width: 100%;
+        max-width: 100vw;
+        min-height: 100vh;
     }
     
     main, .footer, .section {
@@ -1013,7 +1010,6 @@ video:fullscreen {
     border-top: 1px solid var(--color-charcoal-light);
     width: 100%;
     overflow-x: hidden;
-    margin-top: auto;
 }
 
 .footer-container {
@@ -1104,7 +1100,6 @@ video:fullscreen {
     border-top: 1px solid var(--color-charcoal-light);
     background-color: var(--color-dark);
     width: 100%;
-    margin-bottom: 0;
 }
 
 .footer-bottom-container {
@@ -1552,7 +1547,6 @@ video:fullscreen {
 
     .footer-bottom {
         padding: 1.25rem 0;
-        margin-bottom: 0;
     }
 
     .footer-bottom-container {
@@ -1663,7 +1657,7 @@ video:fullscreen {
     }
 
     .footer-bottom {
-        padding: 1rem 0;
+        padding: 1rem 0 0 0;
     }
 
     .whatsapp-float {
