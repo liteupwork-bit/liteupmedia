@@ -77,6 +77,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    position: relative;
 }
 
 main {
@@ -2093,8 +2095,8 @@ video:fullscreen {
 
 /* 3. Infinite Marquee */
 .marquee-container {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
+    width: 100%;
+    max-width: 100%;
     overflow: hidden;
     background-color: var(--color-gold);
     padding: 1.5rem 0;
