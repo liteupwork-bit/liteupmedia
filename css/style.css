@@ -632,11 +632,11 @@ textarea::placeholder {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
-    padding: 2rem 2.5rem;
-    margin-top: 3rem;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    margin-top: 2.5rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    max-width: 700px;
     width: 100%;
 }
 
@@ -644,9 +644,9 @@ textarea::placeholder {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    gap: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .stat-box {
@@ -655,64 +655,65 @@ textarea::placeholder {
 }
 
 .stat-icon {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .stat-box .stat-number {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--color-gold);
     line-height: 1;
     margin-bottom: 0.25rem;
 }
 
 .stat-box .stat-label {
-    font-size: 0.95rem;
-    color: #666666;
-    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--color-gold);
+    font-weight: 600;
 }
 
 .stat-divider {
     width: 1px;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.1);
+    height: 50px;
+    background: rgba(254, 204, 27, 0.2);
 }
 
 .trusted-section {
-    padding-top: 1.5rem;
+    padding-top: 1.25rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .trusted-section .trusted-label {
-    font-size: 0.95rem;
-    color: #666666;
+    font-size: 0.85rem;
+    color: var(--color-gold);
     margin: 0;
     text-transform: none;
     letter-spacing: normal;
     white-space: nowrap;
+    font-weight: 600;
 }
 
 .trusted-section .trusted-label strong {
-    color: #1a1a1a;
+    color: var(--color-gold);
     font-weight: 700;
 }
 
 .client-logos-compact {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
     flex-wrap: wrap;
 }
 
 .client-logos-compact img {
-    height: 40px;
+    height: 35px;
     width: auto;
-    max-width: 80px;
+    max-width: 70px;
     object-fit: contain;
     opacity: 0.7;
     transition: all 0.3s ease;
@@ -725,14 +726,15 @@ textarea::placeholder {
 
 @media (max-width: 768px) {
     .hero-stats-card {
-        padding: 1.5rem;
+        padding: 1.25rem 1.5rem;
         margin-top: 2rem;
+        max-width: 100%;
     }
 
     .stats-row {
         flex-direction: column;
-        gap: 1.5rem;
-        padding-bottom: 1.5rem;
+        gap: 1.25rem;
+        padding-bottom: 1.25rem;
     }
 
     .stat-divider {
@@ -740,11 +742,11 @@ textarea::placeholder {
     }
 
     .stat-box .stat-number {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .stat-box .stat-label {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .trusted-section {
@@ -755,6 +757,7 @@ textarea::placeholder {
 
     .trusted-section .trusted-label {
         white-space: normal;
+        font-size: 0.8rem;
     }
 
     .client-logos-compact {
@@ -763,8 +766,8 @@ textarea::placeholder {
     }
 
     .client-logos-compact img {
-        height: 32px;
-        max-width: 60px;
+        height: 28px;
+        max-width: 55px;
     }
 
     .stats-section {
