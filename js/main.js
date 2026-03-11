@@ -77,26 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(section => sectionObserver.observe(section));
 
-    // Basic Form Submission (prevent default and show success message)
-    const heroForm = document.getElementById('heroForm');
-    if (heroForm) {
-        heroForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            heroForm.style.display = 'none';
-            document.getElementById('heroFormSuccess').style.display = 'flex';
-            heroForm.reset();
-        });
-    }
-
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            contactForm.style.display = 'none';
-            document.getElementById('contactFormSuccess').style.display = 'flex';
-            contactForm.reset();
-        });
-    }
+    // Forms now submit to Formsubmit.co - no preventDefault needed
 
     // Modal Logic
     const getStartedBtn = document.getElementById('getStartedBtn');
