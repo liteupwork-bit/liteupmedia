@@ -626,7 +626,147 @@ textarea::placeholder {
     transform: scale(1.05);
 }
 
+/* Hero Stats Card - New Compact Design */
+.hero-stats-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 2rem 2.5rem;
+    margin-top: 3rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+}
+
+.stats-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.stat-box {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-box .stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.stat-box .stat-label {
+    font-size: 0.95rem;
+    color: #666666;
+    font-weight: 500;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.trusted-section {
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.trusted-section .trusted-label {
+    font-size: 0.95rem;
+    color: #666666;
+    margin: 0;
+    text-transform: none;
+    letter-spacing: normal;
+    white-space: nowrap;
+}
+
+.trusted-section .trusted-label strong {
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.client-logos-compact {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.client-logos-compact img {
+    height: 40px;
+    width: auto;
+    max-width: 80px;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.client-logos-compact img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
 @media (max-width: 768px) {
+    .hero-stats-card {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .stats-row {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .stat-divider {
+        display: none;
+    }
+
+    .stat-box .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-box .stat-label {
+        font-size: 0.9rem;
+    }
+
+    .trusted-section {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .trusted-section .trusted-label {
+        white-space: normal;
+    }
+
+    .client-logos-compact {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .client-logos-compact img {
+        height: 32px;
+        max-width: 60px;
+    }
+
     .stats-section {
         padding: 3rem 0;
     }
